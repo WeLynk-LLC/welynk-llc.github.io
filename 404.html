@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#262a29">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e2221">
+<title>WeLynk LLC | Trucking paperwork help, Cedar Rapids, Iowa</title>
+<meta name="description" content="WeLynk LLC is a private company in Cedar Rapids, Iowa, not the government. Paperwork help for small Iowa trucking companies.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23262a29'/%3E%3Crect y='27' width='32' height='5' fill='%232b6447'/%3E%3Cpath d='M5 6h3.4l2.3 12.5L13.6 6h4.8l2.9 12.5L23.6 6H27l-4.2 17h-4.1L16 11.5 13.3 23H9.2z' fill='white'/%3E%3C/svg%3E">
+<style>
+/* Identical in all four pages: change one, copy the block to the other three. Spec: output/site-design/design-v3.md (changes) on design-v2.md */
+:root {
+  color-scheme: light dark;
+  --paper: #ffffff;
+  --tint: #f0f3f1;
+  --band: #262a29;
+  --ink: #1a1f1d;
+  --muted: #4d5652;
+  --on-band: #ffffff;
+  --on-band-soft: #c9d0cc;
+  --rule: #c2cbc6;
+  --on-band-line: #9ba5a0;
+  --stripe: #2b6447;
+  --brand: #1d4935;
+  --brand-hover: #153829;
+  --on-brand: #ffffff;
+  --focus: #1a1f1d;
+  --focus-on-band: #ffffff;
+  --head: Bahnschrift, "DIN Alternate", "sans-serif-condensed", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --wrap: 70rem;
+  --measure: 42rem;
+  --gutter: clamp(1.25rem, 5vw, 2.5rem);
+  --pad: var(--gutter);
+  --radius: 4px;
+  --tap: 3.25rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121514; --tint: #1a1e1c; --band: #1e2221;
+    --ink: #e6eae8; --muted: #a9b3ae;
+    --on-band: #ffffff; --on-band-soft: #bcc4c0;
+    --rule: #3a423e; --on-band-line: #808a85; --stripe: #3f8160;
+    --brand: #8fcca8; --brand-hover: #a8dbbd; --on-brand: #0f1a14;
+    --focus: #e6eae8; --focus-on-band: #ffffff;
+  }
+}
+.band, footer { --focus: var(--focus-on-band); }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--body); overflow-wrap: break-word; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3, .price, .mark .name, .callbox, .reach a, .biz a { font-family: var(--head); font-stretch: 87.5%; font-weight: 700; }
+h1 { font-size: clamp(1.75rem, 1.25rem + 2vw, 2.25rem); line-height: 1.12; max-width: 22ch; margin: 0 0 1rem; text-wrap: balance; }
+h2 { font-size: clamp(1.375rem, 1.2rem + 0.75vw, 1.75rem); line-height: 1.15; margin: 0 0 1rem; text-wrap: balance; }
+h3 { font-size: 1.25rem; line-height: 1.2; margin: 2rem 0 0.5rem; }
+p { margin: 0 0 1rem; text-wrap: pretty; }
+p, li { max-width: var(--measure); }
+ul, ol { margin: 0 0 1rem; padding-left: 1.125rem; }
+li { margin: 0.25rem 0; }
+li::marker { color: var(--brand); }
+a { color: inherit; text-decoration-color: var(--brand); text-decoration-thickness: 1.5px; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2.5px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.skip { position: absolute; left: -999rem; top: 0; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; padding: 0.75rem 1rem; background: var(--paper); color: var(--ink); }
+.icon { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.btn, .callbox, .price, .fees, .reach a, .biz a { font-variant-numeric: tabular-nums; }
+.small { font-size: 0.9375rem; line-height: 1.45; color: var(--muted); }
+/* The sign: charcoal band, green livery stripe */
+.band { background: var(--band); color: var(--on-band); border-bottom: 4px solid var(--stripe); }
+.band .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 2rem; padding-top: 1rem; padding-bottom: 1rem; }
+.mark { display: flex; flex-direction: column; justify-content: center; min-height: 2.75rem; color: var(--on-band); text-decoration: none; }
+.mark .name { font-size: 1.625rem; line-height: 1.1; letter-spacing: 0.01em; }
+.mark .llc { font-weight: 400; }
+.mark .desc { margin-top: 0.125rem; font-size: 1.0625rem; line-height: 1.35; color: var(--on-band-soft); }
+.mark .desc span { display: inline-block; }
+.callbox { flex: 1 1 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: var(--tap); padding: 0.5rem 1rem; border: 1.5px solid var(--on-band-line); border-radius: var(--radius); color: var(--on-band); font-size: 1.375rem; line-height: 1; text-decoration: none; }
+.callbox:hover { border-color: var(--on-band); }
+/* Sections */
+.sec { padding: 2.5rem 0; }
+.tint { background: var(--tint); }
+.ruled { border-top: 1px solid var(--rule); }
+.sec .wrap > :last-child, .hero-text > :last-child, .svc-body > :last-child, .more-body > :last-child, .owner-side > :last-child, .doc > :last-child { margin-bottom: 0; }
+/* Hero */
+.hero { padding: 1.5rem 0 2.5rem; }
+.hero-text { max-width: var(--measure); }
+.sub { font-size: 1.125rem; line-height: 1.5; }
+.sub strong { font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0 0.75rem; }
+.btn { flex: 1 1 auto; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: var(--tap); padding: 0.75rem 1.25rem; border: 2px solid transparent; border-radius: var(--radius); font: 700 1.0625rem/1.2 var(--body); text-decoration: none; }
+.actions .btn { padding-inline: 1rem; }
+.btn-primary { background: var(--brand); color: var(--on-brand); }
+.btn-primary:hover { background: var(--brand-hover); }
+.btn-secondary { border-color: var(--brand); color: var(--ink); }
+.btn-secondary:hover { background: var(--tint); }
+/* Who you'll deal with: photo and bio, then contact rows. No photo: the bio runs full width. */
+.owner { margin: 2rem calc(-1 * var(--gutter)) 0; padding: 1.5rem var(--pad) 0; border-top: 1px solid var(--rule); }
+.owner h2 { font-size: 1.25rem; margin: 0 0 1rem; }
+.owner-intro { display: flex; gap: 1rem; align-items: flex-start; margin: 0 0 1rem; }
+.owner-photo { flex: none; display: block; width: 7rem; height: 8.75rem; object-fit: cover; border-radius: var(--radius); outline: 1px solid var(--rule); outline-offset: -1px; }
+.owner-bio { flex: 1 1 0; min-width: 0; margin: 0; }
+.reach { list-style: none; margin: 0 0 1rem; padding: 0; border-top: 1px solid var(--rule); }
+.reach li { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.75rem; margin: 0; padding: 0.625rem 0; max-width: none; }
+.reach li + li { border-top: 1px solid var(--rule); }
+.reach .icon { margin-top: 0.125rem; color: var(--brand); }
+.k { display: block; font-size: 0.9375rem; line-height: 1.45; color: var(--muted); }
+.reach a { display: inline-flex; align-items: center; min-height: 2.75rem; font-size: 1.25rem; line-height: 1.2; text-decoration: none; }
+.reach a:hover { text-decoration: underline; }
+.note { display: block; }
+@media (max-width: 22.49rem) { .owner-intro { flex-direction: column; } }
+/* Price sheet: a paper sheet, edge to edge on a phone */
+.sheet { background: var(--paper); border: solid var(--rule); border-width: 1.5px 0; max-width: 60rem; margin: 0 calc(-1 * var(--gutter)) 1.25rem; }
+.svc { padding: 1.5rem var(--pad); }
+.svc + .svc { border-top: 1.5px solid var(--rule); }
+.svc-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.25rem 1rem; margin: 0 0 0.75rem; }
+.svc-head h3 { margin: 0; }
+.price { margin: 0; font-size: 1.625rem; line-height: 1; color: var(--brand); text-align: right; }
+.price small { display: block; margin-top: 0.25rem; font: 400 0.875rem/1.3 var(--body); color: var(--muted); }
+/* Paperwork boxes: empty check boxes only for the audit checklist, numbered squares only for the UCR steps */
+.checklist { max-width: 36rem; }
+.checklist-head { max-width: none; margin: 0; padding: 1rem var(--pad) 0.75rem; font-weight: 700; border-bottom: 1.5px solid var(--rule); }
+.checklist ul { list-style: none; margin: 0; padding: 0; }
+.checklist li { position: relative; max-width: none; margin: 0; padding: 0.875rem var(--pad) 0.875rem calc(var(--pad) + 2.25rem); font-weight: 600; }
+.checklist li + li { border-top: 1px solid var(--rule); }
+.checklist li::before { content: ""; position: absolute; left: var(--pad); top: 1rem; width: 1.375rem; height: 1.375rem; border: 2px solid var(--brand); border-radius: 3px; background: var(--paper); }
+.steps { list-style: none; padding: 0; counter-reset: step; }
+.steps li { counter-increment: step; position: relative; min-height: 2.25rem; padding: 0.25rem 0 0 3.25rem; margin: 0 0 1.25rem; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border: 2px solid var(--brand); border-radius: 2px; font: 700 1.125rem/1 var(--head); color: var(--brand); }
+/* UCR how-to: closed by default; the disclaimer stays outside it */
+.more { margin: 1.25rem 0 0; border-top: 1px solid var(--rule); }
+.more > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: var(--tap); padding: 0.75rem 0; cursor: pointer; list-style: none; font-weight: 700; }
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::after { content: ""; flex: none; width: 0.625rem; height: 0.625rem; margin: 0 0.375rem 0.3rem 0; border: solid var(--brand); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.more[open] > summary::after { margin: 0.3rem 0.375rem 0 0; transform: rotate(-135deg); }
+.more > summary:hover span { text-decoration: underline 2px var(--brand); text-underline-offset: 3px; }
+.more-body { padding: 0.5rem 0 0.25rem; }
+/* UCR fees; the disclaimer is body text: no box, no gray, never small */
+.fees { border-collapse: collapse; width: 100%; max-width: 22rem; margin: 0 0 0.75rem; background: var(--paper); }
+.fees caption { text-align: left; font-weight: 700; padding: 0 0 0.5rem; }
+.fees th, .fees td { border: 1px solid var(--rule); padding: 0.5rem 0.75rem; text-align: left; }
+.fees thead th { background: var(--tint); color: var(--muted); font-size: 0.875rem; font-weight: 600; }
+.fees th:last-child, .fees td:last-child { text-align: right; }
+.disclaimer-intro { font-weight: 700; margin: 1.25rem 0 0.25rem; }
+.disclaimer { font-size: 1.0625rem; color: var(--ink); }
+/* What I'll never do */
+.never { list-style: none; padding: 0; border-top: 1px solid var(--rule); max-width: var(--measure); }
+.never li { margin: 0; padding: 0.625rem 0; border-bottom: 1px solid var(--rule); }
+/* Privacy, terms, 404 */
+.doc { max-width: var(--measure); }
+.inshort { background: var(--tint); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1rem 1.25rem; font-size: 1.125rem; line-height: 1.5; }
+.doc h2 { margin-top: 2.5rem; }
+.effective { margin: 2.5rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); }
+/* Footer band */
+footer { background: var(--band); color: var(--on-band-soft); border-top: 4px solid var(--stripe); padding: 1rem 0 2.5rem; font-size: 0.9375rem; line-height: 1.45; }
+footer a { color: var(--on-band); text-decoration-color: var(--on-band-line); }
+footer nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0 1.75rem; margin: 0 0 1.25rem; padding: 0 0 0.5rem; border-bottom: 1px solid var(--on-band-line); }
+footer nav li { margin: 0; }
+footer nav a { display: inline-flex; align-items: center; min-height: 2.75rem; font-size: 1.0625rem; }
+footer nav a[aria-current] { color: var(--on-band-soft); }
+footer .mark { margin: 0 0 0.75rem; }
+.biz { list-style: none; margin: 0; padding: 0; }
+.biz li { margin: 0.125rem 0; }
+.biz a { display: inline-flex; align-items: center; min-height: 2.75rem; font-size: 1.25rem; }
+@media (min-width: 52rem) {
+:root { --pad: 1.75rem; }
+.sec { padding: 4rem 0; }
+.mark .name { font-size: 1.875rem; }
+.mark .desc { font-size: 1.125rem; }
+.callbox { flex: 0 0 auto; font-size: 1.5rem; padding: 0.5rem 1.25rem; }
+.hero { padding: 3rem 0 4rem; }
+.btn { flex: 0 0 auto; min-width: 10rem; }
+.owner { display: grid; grid-template-columns: minmax(0, 1fr) 21rem; max-width: 60rem; margin: 2.5rem 0 0; padding: var(--pad); border: 1.5px solid var(--rule); border-radius: var(--radius); }
+.owner h2 { grid-column: 1 / -1; }
+.owner-main { padding-right: 1.75rem; }
+.owner-side { padding-left: 1.75rem; border-left: 1px solid var(--rule); }
+.owner-side .reach { border-top: 0; }
+.owner-side .reach li:first-child { padding-top: 0; }
+.sheet { margin: 0 0 1.25rem; border-width: 1.5px; border-radius: var(--radius); }
+.svc { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2rem; }
+.svc-head { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.5rem; margin: 0; }
+.price { text-align: left; }
+.never { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem; max-width: none; }
+.foot { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 1rem 3rem; align-items: start; }
+}
+@media (forced-colors: active) {
+.btn, .callbox, .sheet, .owner, .inshort { border-color: CanvasText; }
+}
+@media print {
+.band, footer, .tint, .sheet, .owner, .inshort, .fees th { background: #fff !important; }
+* { color: #000 !important; }
+.btn, .callbox { display: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="band">
+  <div class="wrap">
+    <a class="mark" href="/">
+      <span class="name">WeLynk <span class="llc">LLC</span></span>
+      <span class="desc"><span>Trucking paperwork help,</span> <span>Cedar Rapids, Iowa</span></span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<section class="sec" aria-labelledby="top-h">
+  <div class="wrap">
+    <div class="doc">
+      <h1 id="top-h">Paperwork help for small Iowa trucking companies</h1>
+      <p class="sub">WeLynk LLC is a private company in Cedar Rapids, Iowa, not the government. I help small carriers with driver files and yearly paperwork.</p>
+      <p>The full site, with prices and my business phone number, goes up shortly. Until then, email me and I'll get back to you by the next day.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:admin@welynk.com">Email admin@welynk.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <p class="mark">
+        <span class="name">WeLynk <span class="llc">LLC</span></span>
+        <span class="desc"><span>Trucking paperwork help,</span> <span>Cedar Rapids, Iowa</span></span>
+      </p>
+      <ul class="biz">
+        <li>Owner: Omar Walweel</li>
+        <li>Email: <a href="mailto:admin@welynk.com">admin@welynk.com</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
